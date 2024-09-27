@@ -1,16 +1,24 @@
-# TEAM TOADD team number
+# TEAM 4
 
 ## App name
 
+**TODO:** TBD
+
 ## Team members
 
-TOADD names of the team members
-TOADD picture of the team
+- Narumi Aguirre-Kanashiro
+- Michael DePaolo
+- Dante Hurr
+- Ayden Rodriguez
+
+**TODO:** Team photo
 
 ## App description
 
+**TODO:** TBD
+
 ## Idea Proposal
-[Idea Proposal]()
+[View on Google Docs](https://docs.google.com/document/d/1E_Oy8bg0Y2sVYaKFZ3GKhS7G9ZgsDuDN/edit)
 
 ## Calendar
 [Calendar](https://calendar.google.com/calendar/u/0?cid=aXZoMmU3NjhzMjRkdGlxZWYwcXZvbzhxcjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
