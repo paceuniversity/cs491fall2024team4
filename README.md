@@ -11,7 +11,7 @@
 - Dante Hurr
 - Ayden Rodriguez
 
-**TODO:** Team photo
+![Team photo](teamphoto.jpeg)
 
 ## App description
 
@@ -25,7 +25,10 @@
 
 ## Product Backlog
 [Requirements Discovery](https://docs.google.com/document/d/16sWuHpuVZluOQdeZk2iXl42V6YaDWeHQfn3sB3lvnDM/edit?usp=sharing)
-[Product Backlog]()
+
+[Product Backlog](https://docs.google.com/spreadsheets/d/13R0Cm3azh8C6I4ZdDoIX3NGR2KjCGCo3qCF6qDjTQdI/edit?gid=8#gid=8)
+
+[Requirements Validation](https://docs.google.com/document/d/1hbdF4vAeB3ECj7bzoVw4tQ9REHw7zp1r/edit?usp=sharing&ouid=106405741471780344102&rtpof=true&sd=true)
 
 ## Architecture & Design
 [Architecture & Design]()
