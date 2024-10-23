@@ -6,10 +6,10 @@ Setter Social
 
 ## Team members
 
-- Narumi Aguirre-Kanashiro
-- Michael DePaolo
-- Dante Hurr
-- Ayden Rodriguez
+- Narumi Aguirre-Kanashiro (Developer, Content Manager, QA Tester)
+- Michael DePaolo (Developer, Scrum Master, QA Tester)
+- Dante Hurr (Developer, Product Owner, QA Tester)
+- Ayden Rodriguez (Developer, Documentation Manager, QA Tester)
 
 ![Team photo](teamphoto.jpeg)
 
