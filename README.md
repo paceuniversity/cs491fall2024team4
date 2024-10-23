@@ -6,10 +6,10 @@ Setter Social
 
 ## Team members
 
-- Narumi Aguirre-Kanashiro
-- Michael DePaolo
-- Dante Hurr
-- Ayden Rodriguez
+- Narumi Aguirre-Kanashiro (Developer, Content Manager, QA Tester)
+- Michael DePaolo (Developer, Scrum Master, QA Tester)
+- Dante Hurr (Developer, Product Owner, QA Tester)
+- Ayden Rodriguez (Developer, Documentation Manager, QA Tester)
 
 ![Team photo](teamphoto.jpeg)
 
@@ -37,8 +37,8 @@ Setter Social
 
 ### Sprint 1
 
-* [Sprint planning]()
-* [Scrums]()
+* [Sprint planning](https://docs.google.com/document/d/1KzwiYCMULmUyLwMTRf4Li1EbIVHiYqqUJcZLqMJv0mY/edit?tab=t.0)
+* [Scrums](https://docs.google.com/document/d/1cmUkc2Q8SQszo7vuiLeh7Bt3gz8dEKSbK2-QwbStg0c/edit?tab=t.0)
 * [Sprint demo video]()
 * [Sprint retrospective]()
 
