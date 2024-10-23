@@ -37,8 +37,8 @@ Setter Social
 
 ### Sprint 1
 
-* [Sprint planning]()
-* [Scrums]()
+* [Sprint planning](https://docs.google.com/document/d/1KzwiYCMULmUyLwMTRf4Li1EbIVHiYqqUJcZLqMJv0mY/edit?tab=t.0)
+* [Scrums](https://docs.google.com/document/d/1cmUkc2Q8SQszo7vuiLeh7Bt3gz8dEKSbK2-QwbStg0c/edit?tab=t.0)
 * [Sprint demo video]()
 * [Sprint retrospective]()
 
