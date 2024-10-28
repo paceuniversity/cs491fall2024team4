@@ -2,14 +2,14 @@
 
 ## App name
 
-**TODO:** TBD
+Setter Social
 
 ## Team members
 
-- Narumi Aguirre-Kanashiro
-- Michael DePaolo
-- Dante Hurr
-- Ayden Rodriguez
+- Narumi Aguirre-Kanashiro (Developer, Content Manager, QA Tester)
+- Michael DePaolo (Developer, Scrum Master, QA Tester)
+- Dante Hurr (Developer, Product Owner, QA Tester)
+- Ayden Rodriguez (Developer, Documentation Manager, QA Tester)
 
 ![Team photo](teamphoto.jpeg)
 
@@ -31,14 +31,14 @@
 [Requirements Validation](https://docs.google.com/document/d/1hbdF4vAeB3ECj7bzoVw4tQ9REHw7zp1r/edit?usp=sharing&ouid=106405741471780344102&rtpof=true&sd=true)
 
 ## Architecture & Design
-[Architecture & Design]()
+[Architecture & Design](https://www.figma.com/files/team/1095467798080641518/project/282219962/CS-491-Team-4?fuid=1091391913002178406)
 
 ## Process
 
 ### Sprint 1
 
-* [Sprint planning]()
-* [Scrums]()
+* [Sprint planning](https://docs.google.com/document/d/1KzwiYCMULmUyLwMTRf4Li1EbIVHiYqqUJcZLqMJv0mY/edit?tab=t.0)
+* [Scrums](https://docs.google.com/document/d/1cmUkc2Q8SQszo7vuiLeh7Bt3gz8dEKSbK2-QwbStg0c/edit?tab=t.0)
 * [Sprint demo video]()
 * [Sprint retrospective]()
 
