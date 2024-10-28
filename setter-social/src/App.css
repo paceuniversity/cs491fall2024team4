@@ -1,3 +1,16 @@
+:root {
+  --chalk__white: #F9FAFB;
+  --golden__yellow: #FFE324;
+  --vintage__black: #0D121C;
+  --sky__blue: #C8D9F9;
+  --royal__blue: #124191;
+  --varsity__navy: #09285D;
+  --pure__white: #FFFFFF;
+  --pure__black: #000000;
+  --warning: #FFB10F;
+  --failure: #FF0E39;
+  --success: #34AB37;
+}
 .App {
   text-align: center;
 }
@@ -35,4 +48,29 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h3 {
+  text-align: center;
+}
+
+.button-primary {
+  background-color: var(--golden__yellow);
+  border: none;
+  border-radius: 40px;
+  color: var(--vintage__black);
+  padding: 20px;
+}
+
+.buttons-group {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.flex-center-col {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
