@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    /* colors */
+    --chalk__white: #F9FAFB;
+    --golden__yellow: #FFE324;
+    --vintage__black: #0D121C;
+    --sky__blue: #C8D9F9;
+    --royal__blue: #124191;
+    --varsity__navy: #09285D;
+    --pure__white: #FFFFFF;
+    --pure__black: #000000;
+    --warning: #FFB10F;
+    --failure: #FF0E39;
+    --success: #34AB37;
+}
+
+/* font styles */
+
+body {
+    color: var(--vintage__black);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h2 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h3 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* text-styles */
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* button styles */
+
+.button__primary {
+    background-color: var(--golden__yellow);
+    border: none;
+    border-radius: 40px;
+    color: var(--vintage__black);
+    padding: 20px;
+}
+  
+.buttons-group {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+  
+.flex-center-col {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
