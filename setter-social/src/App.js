@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Welcome from './Welcome';
 import Signup from './Signup';
 import './App.css';
+import './theme.css';
 
 function App() {
   return (
