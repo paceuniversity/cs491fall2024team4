@@ -1,4 +1,6 @@
 import './theme.css';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './App.css';
 
 function Welcome() {
@@ -13,6 +15,10 @@ function Welcome() {
             <div className='buttons-group'>
                 <button className='button__primary'>Create Account</button>
                 <button  className='button__primary'>Log In</button>
+                <Link to="/signup">
+                    <button className='button-primary'>Create Account</button>
+                </Link>
+                <button className='button-primary'>Log In</button>
             </div>
         </div>
     );
