@@ -13,8 +13,6 @@ function Welcome() {
                 <h4>Welcome to SetterSocial!</h4>
             </div>
             <div className='buttons-group'>
-                <button className='button__primary'>Create Account</button>
-                <button  className='button__primary'>Log In</button>
                 <Link to="/signup">
                     <button className='button-primary'>Create Account</button>
                 </Link>
