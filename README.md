@@ -15,7 +15,7 @@ Setter Social
 
 ## App description
 
-**TODO:** TBD
+SetterSocial was created by a team of students at Pace University as part of a semester-long course project. The intention behind SetterSocial is to help bring university students together, in real life. With the use of social media and AI tools, SetterSocial aims to narrow the gap between university students and their unfound community.
 
 ## Idea Proposal
 [View on Google Docs](https://docs.google.com/document/d/1E_Oy8bg0Y2sVYaKFZ3GKhS7G9ZgsDuDN/edit)
