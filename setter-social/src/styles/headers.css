@@ -1,13 +1,41 @@
 .primary__header {
+    align-items: center;
     border-bottom: 2px dashed var(--royal__blue);
     color: var(--varsity__navy);
+    display: flex;
     height: 4rem;
-    position: absolute;
-    top: 0;
+    position: fixed;
     width: 100vw;
 }
 
+.primary__header span {
+    align-items: center;
+    display: flex;
+    justify-items: center;
+    margin: 0 auto;
+}
+
 .primary__header h2 {
-    margin: 0;
     text-align: center;
+}
+
+.primary__header img {
+    height: 2.5rem;
+    width: auto;
+}
+
+svg.svg-inline--fa {
+    font-size: 2rem;
+}
+
+.icon-left {
+    left: 2rem;
+    top: 1rem;
+    position: absolute;
+}
+
+.icon-right {
+    right: 2rem;
+    top: 1rem;
+    position: absolute;
 }

@@ -5,7 +5,7 @@ import PrimaryHeader from './components/PrimaryHeader';
 function CreateProfile() {
     return(
         <div>
-            <PrimaryHeader screenName='Create Profile' backBtn='visible' />
+            <PrimaryHeader screenName='Create Profile' showLogo='visible' closeBtn='visible' settingsBtn='visible' />
 {/*             <div>
             Create Profile Screen
             header with screen name
