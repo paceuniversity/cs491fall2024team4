@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 
 import HeaderLogoDark from './components/HeaderLogoDark';
 import PrimaryButton from './components/PrimaryButton';
+import SignUpButton from './components/SignUpButton';
+import LogInButton from './components/LogInButton';
 
 function Welcome() {
     return(
@@ -16,11 +18,13 @@ function Welcome() {
                 <h4>Welcome to SetterSocial!</h4>
             </div>
             <div className='buttons-group'>
-                <PrimaryButton buttonLabel='Test' />
+                <PrimaryButton buttonLabel='Test' size='20rem' />
                 <Link to="/signup">
-                    <button className='button__primary'>Create Account</button>
+                    <SignUpButton size='18rem' />
                 </Link>
-                <button className='button__primary'>Log In</button>
+                <Link to=''>
+                    <LogInButton  size='18rem' />
+                </Link>
             </div>
         </div>
     );

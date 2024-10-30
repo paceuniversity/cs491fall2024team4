@@ -46,6 +46,10 @@ h3 {
     font-style: normal;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* text-styles */
 
 .text-center {
