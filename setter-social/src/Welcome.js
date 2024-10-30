@@ -1,24 +1,23 @@
 import './theme.css';
+import './styles/text.css';
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 import HeaderLogoDark from './components/HeaderLogoDark';
-import PrimaryButton from './components/PrimaryButton';
 import SignUpButton from './components/SignUpButton';
 import LogInButton from './components/LogInButton';
 
 function Welcome() {
     return(
-        <div className='flex-center-col'>
+        <div className='flex-center-col dark-theme'>
             <HeaderLogoDark />
-            <div className='text-center'>
-                <h1>Welcome to SetterSocial!</h1>
-                <h2>Welcome to SetterSocial!</h2>
-                <h3>Welcome to SetterSocial!</h3>
-                <h4>Welcome to SetterSocial!</h4>
+            <div>
+                <h2 className='text-center'>Welcome to SetterSocial!</h2>
+                <p className='text-justify mission__para'>
+                    <strong>SetterSocial</strong> was created by a team of students at Pace University as part of a semester-long course project. The intention behind <strong>SetterSocial</strong> is to help bring university students together, in real life. With the use of social media and AI tools, <strong>SetterSocial</strong> aims to narrow the gap between university students and their unfound community.</p>
             </div>
-            <div className='buttons-group'>
-                <PrimaryButton buttonLabel='Test' size='20rem' />
+            <div className='buttons__group'>
                 <Link to="/signup">
                     <SignUpButton size='18rem' />
                 </Link>
