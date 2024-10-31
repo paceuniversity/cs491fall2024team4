@@ -1,11 +1,15 @@
-import './theme.css';
+import '../theme.css';
 
-import PrimaryHeader from './components/PrimaryHeader';
+import PrimaryHeader from '../components/headers/PrimaryHeader';
+import BackButton from '../components/buttons/BackButton';
+import AddSocial from '../components/forms/AddSocialMedia';
 
 function CreateProfile() {
     return(
-        <div>
-            <PrimaryHeader screenName='Create Profile' showLogo='visible' closeBtn='visible' settingsBtn='visible' />
+        <div className='flex-center-col'>
+            <PrimaryHeader screenName='Create Profile' backBtn='visible' logOutBtn='visible' />
+            <AddSocial />
+            {/* <BackButton /> */}
 {/*             <div>
             Create Profile Screen
             header with screen name
