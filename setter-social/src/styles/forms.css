@@ -1,9 +1,39 @@
 input {
-    border: 2px solid red;
-    padding: 30px;
-    width: 300px;
+    background-color: var(--sky__blue);
+    border: 2px solid var(--royal__blue);
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 300px;
 }
 
 label {
-    font-size: 32px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+}
+
+.basic__profile div {
+    display: flex;
+}
+
+.basic__profile__form {
+    display: grid;
+    grid-template-columns: 3;
+}
+
+.major__input {
+    grid-column: 1 2;
+}
+
+.class__input {
+    grid-column: 3;
 }

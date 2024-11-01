@@ -2,12 +2,14 @@ import '../theme.css';
 
 import PrimaryHeader from '../components/headers/PrimaryHeader';
 import BackButton from '../components/buttons/BackButton';
-import AddSocial from '../components/forms/AddSocialMedia';
+import AddSocial from '../components/forms/AddSocialMediaForm';
+import BasicProfileForm from '../components/forms/BasicProfileForm';
 
 function CreateProfile() {
     return(
         <div className='flex-center-col'>
             <PrimaryHeader screenName='Create Profile' backBtn='visible' logOutBtn='visible' />
+            <BasicProfileForm />
             <AddSocial />
             {/* <BackButton /> */}
 {/*             <div>
