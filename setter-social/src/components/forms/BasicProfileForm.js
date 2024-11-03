@@ -7,25 +7,25 @@ const BasicProfileForm = () => {
             <form className='form__container-grid'>
                 <div style={{ gridColumn: 'span 3' }}>
                     <div className='form__field'>
-                        <label for="name">Display Name</label>
+                        <label htmlFor="name">Display Name</label>
                         <input id="addDisplayName" type="text" name="name"></input>
                     </div>
                 </div>
                 <div style={{ gridColumn: 'span 2' }}>
                 <div className='form__field'>
-                    <label for="major">Major</label>
+                    <label htmlFor="major">Major</label>
                     <input id="addMajor" type="text" name="major" className='major__input'></input>
                 </div>
                 </div>
                 <div style={{ gridColumn: 'span 1' }}>
                 <div className='form__field'>
-                    <label for="class">Class Year</label>
+                    <label htmlFor="class">Class Year</label>
                     <input id="addClass" type="text" name="class" className='class__input'></input>
                 </div>
                 </div>
                 <div style={{ gridColumn: 'span 3' }}>
                 <div className='form__field'>
-                    <label for="bio">Bio</label>
+                    <label htmlFor="bio">Bio</label>
                     <input id="addBio" type="text" name="bio"></input>
                 </div>
                 </div>
