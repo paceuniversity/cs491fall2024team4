@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './theme.css';
-import SignUpButton from './components/SignUpButton';
+import '../theme.css';
+import SignUpButton from '../components/buttons/SignUpButton';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
