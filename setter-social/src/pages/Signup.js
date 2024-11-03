@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import '../theme.css';
+import SignUpButton from '../components/buttons/SignUpButton';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -82,7 +84,7 @@ const Signup = () => {
           {errors.password && <p className="error">{errors.password}</p>}
         </div>
 
-        <button type="submit">Sign Up</button>
+        <SignUpButton size="100%" buttonType="submit" />
       </form>
     </div>
   );
