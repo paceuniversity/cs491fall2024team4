@@ -8,18 +8,28 @@
     width: 100vw;
 }
 
-.primary__header span {
+.secondary__header {
+    align-items: center;
+    border-bottom: 2px dashed var(--sky__blue);
+    color: var(--chalk__white);
+    display: flex;
+    height: 4rem;
+    position: sticky;
+    width: 100vw;
+}
+
+.primary__header, .secondary__header span {
     align-items: center;
     display: flex;
     justify-items: center;
     margin: 0 auto;
 }
 
-.primary__header h2 {
+.primary__header, .secondary__header h2 {
     text-align: center;
 }
 
-.primary__header img {
+.primary__header, .secondary__header img {
     height: 2.5rem;
     width: auto;
 }
