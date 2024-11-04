@@ -40,7 +40,7 @@ SetterSocial was created by a team of students at Pace University as part of a s
 * [Sprint planning](https://docs.google.com/document/d/1KzwiYCMULmUyLwMTRf4Li1EbIVHiYqqUJcZLqMJv0mY/edit?tab=t.0)
 * [Scrums](https://docs.google.com/document/d/1cmUkc2Q8SQszo7vuiLeh7Bt3gz8dEKSbK2-QwbStg0c/edit?tab=t.0)
 * [Sprint demo video]()
-* [Sprint retrospective]()
+* [Sprint retrospective](https://docs.google.com/document/d/1frc1RmsTgVKcCY87TGRVPh3Lrnwd4YBzEPfP_ZwckRY/edit?usp=share_link)
 
 ### Sprint 2
 
