@@ -22,6 +22,13 @@
     width: auto;
 }
 
+.light-theme {
+    background: var(--chalk__white);
+    color: var(--varsity__navy);
+    height: 100vh;
+    width: auto;
+}
+
 .buttons__group {
     margin-top: 4rem;
 }
