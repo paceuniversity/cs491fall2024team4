@@ -1,12 +1,12 @@
-import './theme.css';
-import './styles/text.css';
+import '../theme.css';
+import '../styles/text.css';
 
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import HeaderLogoDark from './components/HeaderLogoDark';
-import SignUpButton from './components/SignUpButton';
-import LogInButton from './components/LogInButton';
+import HeaderLogoDark from '../components/logos/HeaderLogoDark';
+import SignUpButton from '../components/buttons/SignUpButton';
+import LogInButton from '../components/buttons/LogInButton';
 
 function Welcome() {
     return(
