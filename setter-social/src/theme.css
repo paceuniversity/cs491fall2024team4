@@ -36,6 +36,7 @@
 /* font styles */
 
 body {
+    background: var(--chalk__white);
     color: var(--vintage__black);
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;

@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faArrowRightFromBracket, faXmark, faGear } from '@fortawesome/free-solid-svg-icons';
 
 const SecondaryHeader = ({ screenName = '', backBtn = 'hidden', closeBtn = 'hidden', settingsBtn ='hidden', logOutBtn = 'hidden', showLogo = 'hidden' }) => (
-    <div className='primary__header' style={{ color: 'var(--chalk__white)'}}>
+    <div className='secondary__header' style={{ color: 'var(--chalk__white)'}}>
         <i>
             <FontAwesomeIcon icon={faChevronLeft} className='icon-left' style={{visibility: backBtn}}/>
             <FontAwesomeIcon icon={faXmark} className='icon-left' style={{visibility: closeBtn}}/>
