@@ -1,7 +1,7 @@
-import '../styles/buttons.css';
-import '../styles/headers.css';
+import '../../styles/buttons.css';
+import '../../styles/headers.css';
 
-import wmLight from '../assets/wordmark-light.svg';
+import wmLight from '../../assets/wordmark-light.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faArrowRightFromBracket, faXmark, faGear } from '@fortawesome/free-solid-svg-icons';
 
