@@ -26,7 +26,7 @@ const BasicProfileForm = () => {
                 <div style={{ gridColumn: 'span 3' }}>
                 <div className='form__field'>
                     <label htmlFor="bio">Bio</label>
-                    <input id="addBio" type="text" name="bio"></input>
+                    <textarea id="addBio" type="text" name="bio"></textarea>
                 </div>
                 </div>
             </form>

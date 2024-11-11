@@ -63,7 +63,7 @@ const CreateEventForm = () => {
                 <div style={{ gridColumn: 'span 3' }}>
                     <div className='form__field'>
                         <label htmlFor='eventDesc'>Description</label>
-                        <input id='eDesc' type='text' name='eventDesc' value={description} onChange={(e) => setEventDesc(e.target.value)}></input>
+                        <textarea id='eDesc' type='text' name='eventDesc' value={description} onChange={(e) => setEventDesc(e.target.value)}></textarea>
                     </div>
                 </div>
 
