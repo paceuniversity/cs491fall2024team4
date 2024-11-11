@@ -13,6 +13,8 @@
     --warning: #FFB10F;
     --failure: #FF0E39;
     --success: #34AB37;
+    /* shadows */
+    --footer__shadow: #12419166;
 }
 
 .dark-theme {

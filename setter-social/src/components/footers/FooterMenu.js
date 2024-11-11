@@ -7,46 +7,101 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment, faUsers, faHouse, faCalendar, faUser } from '@fortawesome/free-solid-svg-icons';
 
-import { Menu } from 'antd';
+import { ConfigProvider, Flex, Menu } from 'antd';
+import { Link } from 'react-router-dom';
 
 const menuItems = [
     {
-        label: 'GO! Chat',
+        label: (
+            <Link to='/chat'>GO! Chat</Link>
+        ),
         key: 'chat',
-        icon: <FontAwesomeIcon icon={faComment} />,
+        icon: (
+        <FontAwesomeIcon icon={faComment} />
+        ),
+        style: (
+            {display: 'flex', flexDirection: 'column', margin: '0 auto'}
+        ),
     },
     {
-        label: 'Groups',
+        label: (
+            <Link to='/groups'>Groups</Link>
+        ),
         key: 'groups',
-        icon: <FontAwesomeIcon icon={faUsers} />,
+        icon: (
+        <FontAwesomeIcon icon={faUsers} />
+        ),
     },
     {
-        label: 'Feed',
+        label: (
+            <Link to='/feed'>Feed</Link>
+        ),
         key: 'feed',
-        icon: <FontAwesomeIcon icon={faHouse} />,
+        icon: (
+        <FontAwesomeIcon icon={faHouse} />
+        ),
     },
     {
-        label: 'Events',
+        label: (
+            <Link to='/events'>Events</Link>
+        ),
         key: 'events',
-        icon: <FontAwesomeIcon icon={faCalendar} />,
+        icon: (
+        <FontAwesomeIcon icon={faCalendar} />
+        ),
     },
     {
-        label: 'Profile',
+        label: (
+            <Link to='/profile'>Profile</Link>
+        ),
         key: 'profile',
-        icon: <FontAwesomeIcon icon={faUser} />,
+        icon: (
+        <FontAwesomeIcon icon={faUser} />
+        ),
     },
 ];
 
 const FooterMenu = () => {
-    const [ current, setCurrent ] = useState('feed');
+    const [ active, setActive ] = useState(null);
     const menuNav = (e) => {
-        console.log("menu clicked: ", e)
-        setCurrent(e.key);
+        console.log("menu clicked: ", e);
+        //className={active === e.id ? 'active' : ''}
+        setActive(e.id);
     };
     return(
-        <div className='footer__menu-container'>
-            <Menu mode='horizontal' onClick={menuNav} selectedKeys={[current]} items={menuItems}>
-            </Menu>
+        <div className='footer__menu-wrap'>
+            <div className='footer__menu-container'>
+                <Link to='/chat'>
+                    <button id='chat' className='footer__menu-button'>
+                        <FontAwesomeIcon icon={faComment}/>
+                        GO! Chat
+                    </button>
+                </Link>
+                <Link to='/groups'>
+                    <button id='groups' className='footer__menu-button'>
+                        <FontAwesomeIcon icon={faUsers}/>
+                        Groups
+                    </button>
+                </Link>
+                <Link to='/feed'>
+                    <button id='feed' className='footer__menu-button'>
+                        <FontAwesomeIcon icon={faHouse}/>
+                        Feed
+                    </button>
+                </Link>
+                <Link to='/events'>
+                    <button id='events' className='footer__menu-button'>
+                        <FontAwesomeIcon icon={faCalendar}/>
+                        Events
+                    </button>
+                </Link>
+                <Link>
+                    <button id='profile' className='footer__menu-button' onClick={menuNav}>
+                        <FontAwesomeIcon icon={faUser}/>
+                        Profile
+                    </button>
+                </Link>
+            </div>
         </div>
     );
 }

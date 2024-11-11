@@ -8,7 +8,7 @@ const { Header, Footer, Content } = Layout;
 
 function CreateEvent() {
     return(
-        <Flex gap="middle">
+        <Flex gap="middle" align='center'>
             <Layout>
                 <Header>Header</Header>
                 <Content>Content</Content>

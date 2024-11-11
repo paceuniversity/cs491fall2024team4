@@ -1,4 +1,33 @@
-.footer__menu-container {
+.footer__menu-wrap {
     background: var(--varsity__navy);
     color: var(--chalk__white);
+    padding: 2rem;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    box-shadow: 0 -4px 24px 0px var(--footer__shadow);
+}
+.footer__menu-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.footer__menu-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    margin: 0 auto;
+}
+
+.footer__menu-button {
+    background: none;
+    border: none;
+    color: var(--chalk__white);
+}
+
+.footer__menu-button :active {
+    background: none;
+    border: none;
+    color: var(--golden__yellow);
 }
