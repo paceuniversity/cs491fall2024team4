@@ -1,0 +1,7 @@
+import '../theme.css';
+
+export default function PageNotFound() {
+    return(
+        <div>404 page not found - TEST</div>
+    );
+}
