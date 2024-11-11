@@ -66,6 +66,7 @@ const FooterMenu = () => {
     const menuNav = (e) => {
         console.log("menu clicked: ", e);
         //className={active === e.id ? 'active' : ''}
+        e.className += ' :active';
         setActive(e.id);
     };
     return(
