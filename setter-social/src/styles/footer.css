@@ -24,6 +24,8 @@
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     box-shadow: 0 -4px 24px 0px var(--footer__shadow);
+    bottom: 0;
+    position: fixed; /* absolute?? */
 }
 .footer__menu-container {
     display: flex;

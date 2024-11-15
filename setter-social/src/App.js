@@ -9,8 +9,11 @@ import Signup from './pages/Signup';
 import CreateProfile from './pages/CreateProfile';
 import ProfileEdit from './pages/ProfileEdit';
 import CreateEvent from './pages/CreateEvent';
-import { ConfigProvider } from 'antd';
 import PageNotFound from './pages/404';
+import FooterMenu from './components/footers/FooterMenu';
+
+import { ConfigProvider } from 'antd';
+
 
 function App() {
   return (
@@ -34,6 +37,8 @@ function App() {
           <Route path='/feed' element={<PageNotFound />} />
           <Route path='/events' element={<PageNotFound />} />
       </Routes>
+      
+      <FooterMenu />
     </>
 
   );
