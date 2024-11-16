@@ -88,3 +88,11 @@ a {
     display: flex;
     flex-direction: column;
 }
+
+/* errors */
+
+.error{
+    color: var(--failure);
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
