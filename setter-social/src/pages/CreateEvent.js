@@ -7,7 +7,7 @@ function CreateEvent() {
     return(
         <div className='flex-center-col light-theme'>
             <CreateEventForm />
-            <FooterMenu />
+{/*             <FooterMenu /> */}
         </div>
     );
 }

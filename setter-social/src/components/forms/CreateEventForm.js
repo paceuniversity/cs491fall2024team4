@@ -46,7 +46,7 @@ const CreateEventForm = () => {
                     </div>
                 </div>
 
-                <div style={{ gridColumn: 'span 1' }}>
+                <div style={{ gridColumn: '1' }}>
                     <div className='form__field'>
                         <label htmlFor='eventTime'>Time</label>
                         <input id='eTime' type='time' name='eventTime' value={time} onChange={(e) => setEventTime(e.target.value)}></input>
@@ -66,8 +66,8 @@ const CreateEventForm = () => {
                         <textarea id='eDesc' type='text' name='eventDesc' value={description} onChange={(e) => setEventDesc(e.target.value)}></textarea>
                     </div>
                 </div>
-
-                <button type='submit' className='icon-button'>
+{/*                 doesn't appear on mobile as expected                    */}                
+                <button type='submit' className='icon-button' style={{gridColumn: '2', marginTop: '4rem'}}>
                     <FontAwesomeIcon icon={faCirclePlus} /> Create Event
                 </button>
             </form>
