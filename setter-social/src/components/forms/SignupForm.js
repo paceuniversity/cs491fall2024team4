@@ -10,18 +10,33 @@ const SignupForm = ({ formData, handleChange, errors }) => {
             <h2>Sign Up</h2>
 
             <form className="form__container-grid">
-                <div style={{ gridColumn: 'span 3' }}>
+                <div style={{ gridColumn: 'span 1' }}>
                     <div className="form__field">
-                        <label htmlFor="name">Name</label>
+                        <label htmlFor="firstName">First Name</label>
                         <input
-                            id="addName"
+                            id="firstName"
                             type="text"
-                            name="name"
-                            value={formData.name}
+                            name="firstName"
+                            value={formData.firstName}
                             onChange={handleChange}
                             className="form-input-field"
                         />
-                        {errors.name && <p className="error">{errors.name}</p>}
+                        {errors.firstName && <p className="error">{errors.firstName}</p>}
+                    </div>
+                </div>
+
+                <div style={{ gridColumn: 'span 2' }}>
+                    <div className="form__field">
+                        <label htmlFor="lastName">Last Name</label>
+                        <input
+                            id="lastName"
+                            type="text"
+                            name="lastName"
+                            value={formData.lastName}
+                            onChange={handleChange}
+                            className="form-input-field"
+                        />
+                        {errors.lastName && <p className="error">{errors.lastName}</p>}
                     </div>
                 </div>
 
@@ -67,6 +82,20 @@ const SignupForm = ({ formData, handleChange, errors }) => {
                             className="form-input-field"
                         />
                         {errors.confirmPassword && <p className="error">{errors.confirmPassword}</p>}
+                    </div>
+                </div>
+
+                <div style={{ gridColumn: 'span 3' }}>
+                    <div className="form__field">
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="rememberMe"
+                                checked={formData.rememberMe}
+                                onChange={handleChange}
+                            />
+                            Remember Me Next Time
+                        </label>
                     </div>
                 </div>
             </form>

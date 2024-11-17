@@ -11,6 +11,7 @@ import ProfileEdit from './pages/ProfileEdit';
 import CreateEvent from './pages/CreateEvent';
 import PageNotFound from './pages/404';
 import FooterMenu from './components/footers/FooterMenu';
+import EventCreator from './pages/EventCreator';
 
 import { ConfigProvider } from 'antd';
 
@@ -36,11 +37,11 @@ function App() {
           <Route path='/groups' element={<PageNotFound />} />
           <Route path='/feed' element={<PageNotFound />} />
           <Route path='/events' element={<PageNotFound />} />
+          <Route path='/eventcreator' element={<EventCreator />} />
       </Routes>
       
       <FooterMenu />
     </>
-
   );
 }
 
