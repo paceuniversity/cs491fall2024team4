@@ -14,6 +14,13 @@ h2 {
     padding: 20px;
 }
 
+.form__field textarea {
+    background-color: var(--sky__blue);
+    border: 2px solid var(--royal__blue);
+    border-radius: 10px;
+    padding: 20px;
+}
+
 .form__field label {
     font-size: 1rem;
     margin-top: 1rem;
