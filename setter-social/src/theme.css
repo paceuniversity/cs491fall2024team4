@@ -89,9 +89,15 @@ a {
     flex-direction: column;
 }
 
+.flex-center-justify {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 /* errors */
 
-.error{
+.error {
     color: var(--failure);
     font-size: 1rem;
     margin-top: 0.5rem;
