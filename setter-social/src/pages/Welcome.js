@@ -27,7 +27,7 @@ function Welcome() {
                     <LogInButton  size='18rem' />
                 </Link>
             </div>
-            <TestForm />
+{/*             <TestForm /> */}
         </div>
     );
 }
