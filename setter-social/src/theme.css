@@ -15,6 +15,7 @@
     --success: #34AB37;
     /* shadows */
     --footer__shadow: #12419166;
+    --card__shadow: #09285D66
 }
 
 .dark-theme {
@@ -87,4 +88,29 @@ a {
     align-items: center;
     display: flex;
     flex-direction: column;
+}
+
+.flex-center-justify {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* errors */
+
+.error {
+    color: var(--failure);
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* wrappers */
+.explore-wrapper {
+    margin: 0 auto 10% auto;
+    width: 50vw;
+}
+
+.footer__menu-wrapper {
+    margin: 0 auto;
+    /* position: static; */
 }

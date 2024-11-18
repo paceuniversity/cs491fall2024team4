@@ -6,8 +6,8 @@ Setter Social
 
 ## Team members
 
-- Narumi Aguirre-Kanashiro (Developer, Content Manager, QA Tester)
-- Michael DePaolo (Developer, Scrum Master, QA Tester)
+- Narumi Aguirre-Kanashiro (Developer, Scrum Master, QA Tester)
+- Michael DePaolo (Developer, Content Manager, QA Tester)
 - Dante Hurr (Developer, Product Owner, QA Tester)
 - Ayden Rodriguez (Developer, Documentation Manager, QA Tester)
 
@@ -45,9 +45,9 @@ SetterSocial was created by a team of students at Pace University as part of a s
 ### Sprint 2
 
 * [Sprint planning](https://docs.google.com/document/d/1empVjAJck_5d-XiLiNPSVZpvhQ8qgCyewp3ks6fR-3Y/edit?usp=sharing)
-* [Scrums]()
-* [Sprint demo video]()
-* [Sprint retrospective]()
+* [Scrums](https://docs.google.com/document/d/1HFyZtkPKbQP7dTMa1il7w0hZA2aWYlO_SecfGEN4yTs/edit?usp=share_link)
+* [Sprint demo video](https://drive.google.com/file/d/1DeJAl8CaVHo6hA2JT5bLlfEee5UnK8vj/view?usp=share_link)
+* [Sprint retrospective](https://docs.google.com/document/d/1CCRe7hW0iM1caKDsK5rdHyQmmDnx0X_kxBzn6dqPvnc/edit?usp=sharing)
 
 ### Sprint 3
 

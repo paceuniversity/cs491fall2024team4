@@ -9,8 +9,14 @@ import Signup from './pages/Signup';
 import CreateProfile from './pages/CreateProfile';
 import ProfileEdit from './pages/ProfileEdit';
 import CreateEvent from './pages/CreateEvent';
-import { ConfigProvider } from 'antd';
 import PageNotFound from './pages/404';
+import ComingSoon from './pages/ComingSoon';
+import FooterMenu from './components/footers/FooterMenu';
+import EventCreator from './pages/EventCreator';
+import ExploreEvents from './pages/ExploreEvents';
+
+import { ConfigProvider } from 'antd';
+
 
 function App() {
   return (
@@ -28,14 +34,18 @@ function App() {
           <Route path='/signup/newprofile' element={<CreateProfile />} />
           <Route path='/profile/edit' element={<ProfileEdit />} />
           <Route path='/events/newevent' element={<CreateEvent />} />
-          <Route path='/profile' element={<PageNotFound />} />
-          <Route path='/chat' element={<PageNotFound />} />
-          <Route path='/groups' element={<PageNotFound />} />
-          <Route path='/feed' element={<PageNotFound />} />
-          <Route path='/events' element={<PageNotFound />} />
-      </Routes>
-    </>
+          <Route path='/profile' element={<ComingSoon />} />
+          <Route path='/chat' element={<ComingSoon />} />
+          <Route path='/groups' element={<ComingSoon />} />
+          <Route path='/feed' element={<ComingSoon />} />
+          <Route path='/events' element={<ExploreEvents />} />
+          <Route path='/eventcreator' element={<EventCreator />} />
 
+      </Routes>
+      <div className='footer__menu-wrapper'>
+        <FooterMenu />
+      </div>
+    </>
   );
 }
 
