@@ -12,6 +12,7 @@ import CreateEvent from './pages/CreateEvent';
 import PageNotFound from './pages/404';
 import ComingSoon from './pages/ComingSoon';
 import FooterMenu from './components/footers/FooterMenu';
+import EventCreator from './pages/EventCreator';
 
 import { ConfigProvider } from 'antd';
 
@@ -37,11 +38,12 @@ function App() {
           <Route path='/groups' element={<ComingSoon />} />
           <Route path='/feed' element={<ComingSoon />} />
           <Route path='/events' element={<ComingSoon />} />
+          <Route path='/eventcreator' element={<EventCreator />} />
+
       </Routes>
       
       <FooterMenu />
     </>
-
   );
 }
 
