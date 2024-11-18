@@ -17,7 +17,7 @@ const BasicProfileForm = () => {
                     <input id="addMajor" type="text" name="major" className='major__input'></input>
                 </div>
                 </div>
-                <div style={{ gridColumn: 'span 1' }}>
+                <div style={{ gridColumn: '3' }}>
                 <div className='form__field'>
                     <label htmlFor="class">Class Year</label>
                     <input id="addClass" type="text" name="class" className='class__input'></input>
@@ -26,7 +26,7 @@ const BasicProfileForm = () => {
                 <div style={{ gridColumn: 'span 3' }}>
                 <div className='form__field'>
                     <label htmlFor="bio">Bio</label>
-                    <input id="addBio" type="text" name="bio"></input>
+                    <textarea id="addBio" type="text" name="bio"></textarea>
                 </div>
                 </div>
             </form>
