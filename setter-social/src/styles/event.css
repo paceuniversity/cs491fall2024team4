@@ -1,0 +1,59 @@
+:root {
+    /* colors */
+    --chalk__white: #F9FAFB;
+    --golden__yellow: #FFE324;
+    --vintage__black: #0D121C;
+    --sky__blue: #C8D9F9;
+    --royal__blue: #124191;
+    --varsity__navy: #09285D;
+    --pure__white: #FFFFFF;
+    --pure__black: #000000;
+    --warning: #FFB10F;
+    --failure: #FF0E39;
+    --success: #34AB37;
+}
+
+.event-form-container {
+    background-color: var (--chalk__white);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.form__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.form__field input,
+.form__field textarea {
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--royal__blue);
+    background-color: var(--sky__blue);
+}
+
+.buttons__group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.event-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .event-cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

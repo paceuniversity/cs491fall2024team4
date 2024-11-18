@@ -2,106 +2,46 @@ import '../../styles/text.css';
 import '../../styles/buttons.css';
 import '../../styles/footer.css';
 
-import { useState } from 'react';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment, faUsers, faHouse, faCalendar, faUser } from '@fortawesome/free-solid-svg-icons';
 
-import { ConfigProvider, Flex, Menu } from 'antd';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-const menuItems = [
-    {
-        label: (
-            <Link to='/chat'>GO! Chat</Link>
-        ),
-        key: 'chat',
-        icon: (
-        <FontAwesomeIcon icon={faComment} />
-        ),
-        style: (
-            {display: 'flex', flexDirection: 'column', margin: '0 auto'}
-        ),
-    },
-    {
-        label: (
-            <Link to='/groups'>Groups</Link>
-        ),
-        key: 'groups',
-        icon: (
-        <FontAwesomeIcon icon={faUsers} />
-        ),
-    },
-    {
-        label: (
-            <Link to='/feed'>Feed</Link>
-        ),
-        key: 'feed',
-        icon: (
-        <FontAwesomeIcon icon={faHouse} />
-        ),
-    },
-    {
-        label: (
-            <Link to='/events'>Events</Link>
-        ),
-        key: 'events',
-        icon: (
-        <FontAwesomeIcon icon={faCalendar} />
-        ),
-    },
-    {
-        label: (
-            <Link to='/profile'>Profile</Link>
-        ),
-        key: 'profile',
-        icon: (
-        <FontAwesomeIcon icon={faUser} />
-        ),
-    },
-];
 
 const FooterMenu = () => {
-    const [ active, setActive ] = useState(null);
-    const menuNav = (e) => {
-        console.log("menu clicked: ", e);
-        //className={active === e.id ? 'active' : ''}
-        e.className += ' :active';
-        setActive(e.id);
-    };
     return(
         <div className='footer__menu-wrap'>
-            <div className='footer__menu-container'>
-                <Link to='/chat'>
-                    <button id='chat' className='footer__menu-button'>
+            <div id='footer__menu' className='footer__menu-container'>
+                <NavLink to='/chat'>
+                    <span id='chatMenuBtn'>
                         <FontAwesomeIcon icon={faComment}/>
-                        GO! Chat
-                    </button>
-                </Link>
-                <Link to='/groups'>
-                    <button id='groups' className='footer__menu-button'>
+                        <h4>GO! Chat</h4>
+                    </span>
+                </NavLink>
+                <NavLink to='/groups'>
+                    <span id='groupsMenuBtn'>
                         <FontAwesomeIcon icon={faUsers}/>
-                        Groups
-                    </button>
-                </Link>
-                <Link to='/feed'>
-                    <button id='feed' className='footer__menu-button'>
+                        <h4>Groups</h4>
+                    </span>
+                </NavLink>
+                <NavLink to='/feed'>
+                    <span id='feedMenuBtn'>
                         <FontAwesomeIcon icon={faHouse}/>
-                        Feed
-                    </button>
-                </Link>
-                <Link to='/events'>
-                    <button id='events' className='footer__menu-button'>
+                        <h4>Feed</h4>
+                    </span>
+                </NavLink>
+                <NavLink to='/events'>
+                    <span id='eventsMenuBtn'>
                         <FontAwesomeIcon icon={faCalendar}/>
-                        Events
-                    </button>
-                </Link>
-                <Link>
-                    <button id='profile' className='footer__menu-button' onClick={menuNav}>
+                        <h4>Events</h4>
+                    </span>
+                </NavLink>
+                <NavLink to='/profile'>
+                    <span id='profileMenuBtn'>
                         <FontAwesomeIcon icon={faUser}/>
-                        Profile
-                    </button>
-                </Link>
+                        <h4>Profile</h4>
+                    </span>
+                </NavLink>
             </div>
         </div>
     );
