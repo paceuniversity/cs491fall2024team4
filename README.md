@@ -58,6 +58,14 @@ SetterSocial was created by a team of students at Pace University as part of a s
 
 ## Tools & APIs
 
+* Firebase
+  - Hosting
+  - Storage
+  - Cloud Firestore
+  - Authentication
+* ant.design
+* FontAwesome6
+
 ## Final delivery
 
 * [Final presentation]()
