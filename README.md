@@ -65,6 +65,7 @@ SetterSocial was created by a team of students at Pace University as part of a s
   - Authentication
 * ant.design
 * FontAwesome6
+* Discord
 
 ## Final delivery
 
