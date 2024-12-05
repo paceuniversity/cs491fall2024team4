@@ -16,6 +16,7 @@ import EventCreator from './pages/EventCreator';
 import ExploreEvents from './pages/ExploreEvents';
 
 import { ConfigProvider } from 'antd';
+import LogIn from './pages/Login';
 
 
 function App() {
@@ -40,7 +41,7 @@ function App() {
           <Route path='/feed' element={<ComingSoon />} />
           <Route path='/events' element={<ExploreEvents />} />
           <Route path='/eventcreator' element={<EventCreator />} />
-
+          <Route path='/login' element={<LogIn />} />
       </Routes>
       <div className='footer__menu-wrapper'>
         <FooterMenu />

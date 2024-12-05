@@ -1,26 +1,24 @@
-//import { useState } from "react";
+import { useState } from "react";
 
+import { Navigate } from "react-router-dom";
 import { auth } from "../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
-async function authSignIn(email, password) {
-    //const [ email, setEmail ] = useState("");
-    //const [ password, setPassword ] = useState("");
+function SignIn() {
+    const [ email, setEmail ] = useState("");
+    const [ password, setPassword ] = useState("");
 
-/*     const handleSignIn = async () => {
+    const handleSignIn = async() => {
         try {
             await signInWithEmailAndPassword(auth, email, password);
+            <Navigate to="/feed" />
         } catch(error) {
-            console.log("There was an error: ", error);
+            error.preventDefault();
+            console.log("There was an error at log in: ", error);
+            alert("Error: ", error);
         }
-    }; */
-
-    try {
-        await signInWithEmailAndPassword(auth, email, password);
-    } catch(error) {
-        console.log("There was an error at log in: ", error);
-    }
+    };
 
 }
 
-export default authSignIn;
+export default SignIn;
