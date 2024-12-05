@@ -1,96 +1,38 @@
-import React, { useState } from 'react';
-import '../theme.css';
-import HeaderLogoDark from '../components/logos/HeaderLogoDark';
-import SignUpButton from '../components/buttons/SignUpButton';
-import SignupForm from '../components/forms/SignupForm';
+import { useState } from "react";
+import { Navigate } from "react-router-dom";
+import { auth } from "../firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
-const Signup = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-  });
+function Signup() {
+  const [ email, setEmail ] = useState("");
+  const [ password, setPassword ] = useState("");
+  const [redirectToFeed, setRedirectToFeed] = useState(false);
 
-  const [errors, setErrors] = useState({});
+  const handleSignUp = async(event) => {
+    event.preventDefault();
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const validate = () => {
-    const newErrors = {};
-
-    {
-      if (!formData.name) {
-        newErrors.name = "*Name is required!*";
-      }
+    try {
+        await createUserWithEmailAndPassword(auth, email, password);
+        setRedirectToFeed(true);
+    } catch(error) {
+        console.log("There was an error at sign up: ", error);
+        alert(error.message);
     }
+};
 
-    {
-      if (!formData.email) {
-        newErrors.email = "*Email is required!*";
-      } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-        newErrors.email = "*Email is invalid*";
-      }
-    }
-
-    {
-      if (!formData.password) {
-        newErrors.password = "*Password is required!*";
-      } else if (formData.password.length < 6) {
-        newErrors.password = "*Password must be at least 6 characters*";
-      }
-    }
-
-    {
-      if (!formData.confirmPassword) {
-        newErrors.confirmPassword = "*Password is required!*";
-      } else if (formData.password !== formData.confirmPassword) {
-        newErrors.password = "*Passwords DO NOT match!*";
-    }
-  }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (validate()) {
-      console.log('User signed up successfully with data:', formData);
-      // Handle signup logic here
-    }
-  };
+if (redirectToFeed) {
+    return <Navigate to="/feed" replace />;
+}
 
   return (
-    <div className="signup-form flex-center-col dark-theme">
-      <HeaderLogoDark size="10rem" />
+    <div>
+      <form onSubmit={handleSignUp}>
+        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
+        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
 
-      <form onSubmit={handleSubmit} className="form__container-grid">
-        <SignupForm
-          formData={formData}
-          handleChange={handleChange}
-          errors={errors}
-        />
-
-        <div
-          style={{
-            gridColumn: 'span 3',
-            display: 'flex',
-            alignItems: 'center',
-            marginTop: '3rem',
-          }}
-          className="form__field sign-up-button-container"
-        >
-          <SignUpButton size="90%" buttonType="submit" />
-        </div>
-      </form>
-    </div>
+        <button className="icon-button">Sign Up</button>
+    </form>
+</div>
   );
 };
 

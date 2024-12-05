@@ -23,7 +23,7 @@ function Welcome() {
                 <Link to="/signup">
                     <SignUpButton size='18rem' />
                 </Link>
-                <Link to=''>
+                <Link to='/login'>
                     <LogInButton  size='18rem' />
                 </Link>
             </div>

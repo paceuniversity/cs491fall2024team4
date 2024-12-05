@@ -6,10 +6,10 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 function LogIn() {
     const [ email, setEmail ] = useState("");
     const [ password, setPassword ] = useState("");
-    const [redirectToFeed, setRedirectToFeed] = useState(false); // State for navigation
+    const [redirectToFeed, setRedirectToFeed] = useState(false);
 
     const handleSignIn = async(event) => {
-        event.preventDefault(); // Prevent default form submission behavior
+        event.preventDefault();
 
         try {
             await signInWithEmailAndPassword(auth, email, password);
