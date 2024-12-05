@@ -1,8 +1,8 @@
-h2 {
+.form__wrapper, .form__field h2 {
     text-align: center;
 }
 
-.form__field {
+.form__field, .form__field-dark {
     display: flex;
     flex-direction: column;
 }
@@ -14,6 +14,14 @@ h2 {
     padding: 20px;
 }
 
+.form__field-dark input {
+    background-color: var(--royal__blue);
+    border: 2px solid var(--sky__blue);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 1rem;
+}
+
 .form__field textarea {
     background-color: var(--sky__blue);
     border: 2px solid var(--royal__blue);
@@ -21,10 +29,18 @@ h2 {
     padding: 20px;
 }
 
-.form__field label {
+.form__field-dark textarea {
+    background-color: var(--royal__blue);
+    border: 2px solid var(--sky__blue);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.form__field, .form__field-dark label {
     font-size: 1rem;
     margin-top: 1rem;
     text-transform: uppercase;
+    text-align: left;
 }
 
 .form__container-grid {
@@ -39,6 +55,11 @@ h2 {
     display: flex;
     flex-direction: column;
     margin: auto;
+}
+
+.form__container-flex button {
+    align-self: center;
+    margin-top: 2rem;
 }
 
 /* for computer screens */

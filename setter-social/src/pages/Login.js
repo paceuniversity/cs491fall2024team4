@@ -3,6 +3,11 @@ import { Navigate } from "react-router-dom";
 import { auth } from "../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
+import HeaderLogoDark from "../components/logos/HeaderLogoDark";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRightToBracket } from '@fortawesome/free-solid-svg-icons';
+
 function LogIn() {
     const [ email, setEmail ] = useState("");
     const [ password, setPassword ] = useState("");
@@ -13,29 +18,36 @@ function LogIn() {
 
         try {
             await signInWithEmailAndPassword(auth, email, password);
-            setRedirectToFeed(true); // Trigger navigation
+            setRedirectToFeed(true);
         } catch(error) {
             console.log("There was an error at log in: ", error);
             alert(error.message);
         }
     };
 
-    // Redirect if login is successful
     if (redirectToFeed) {
         return <Navigate to="/feed" replace />;
     }
 
     return(
-        <div>
-            <form onSubmit={handleSignIn}>
-{/*                 <label htmlFor="userEmail">Email</label>
- */}                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
+        <div className="form__wrapper dark-theme flex-center-col">
+            <HeaderLogoDark />
+            <h2>Account Login</h2>
+            <div>
+                <form className="form__container-flex form__field-dark" onSubmit={handleSignIn}>
+                    <label htmlFor="userEmail">Email</label>
+                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
 
-{/*                 <label htmlFor="userPassword">Password</label>
- */}                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
+                    <label htmlFor="userPassword">Password</label>
+                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
 
-                <button className="icon-button">Log In</button>
-            </form>
+{/*                     <h3>You will automatically be remembered the next time you visit.</h3> */}
+
+                    <button className="icon-button">
+                        <FontAwesomeIcon icon={faRightToBracket} />Log In
+                    </button>
+                </form>
+            </div>
         </div>
     );
 }
