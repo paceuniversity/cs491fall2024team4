@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Navigate } from "react-router-dom";
 import { auth } from "../firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
 import HeaderLogoDark from "../components/logos/HeaderLogoDark";
 
@@ -10,6 +10,7 @@ import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
 
 function Signup() {
   const [ email, setEmail ] = useState("");
+  const [ username, setUserName ] = useState("");
   const [ password, setPassword ] = useState("");
 
   const [redirectToForm, setRedirectToForm] = useState(false);
@@ -18,8 +19,18 @@ function Signup() {
     event.preventDefault();
 
     try {
-        await createUserWithEmailAndPassword(auth, email, password);
-        setRedirectToForm(true);
+        await createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
+
+          const user = userCredential.user;
+
+          updateProfile(user, {
+              displayName: username
+          })
+          .then(() => {
+              alert("User profile created!");
+              setRedirectToForm(true);
+          })
+        })
     } catch(error) {
         console.log("There was an error at sign up: ", error);
         alert(error.message);
@@ -44,6 +55,9 @@ if (redirectToForm) {
 
           <label>Email</label>
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
+
+          <label>Display Name</label>
+          <input type="text" value={username} onChange={(e) => setUserName(e.target.value)}></input>
 
           <label>Password</label>
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
