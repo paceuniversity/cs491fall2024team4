@@ -10,12 +10,12 @@ export const profileWrite = async (data) => {
     try {
         const add = {
             bio: data.bio,
-            class: data.class,
+            classyear: data.classyear,
             firstname: data.firstname,
             lastname: data.lastname,
             major: data.major,
-            pid: data.pid, //need to get from currentUser
-            user: data.username,
+            // pid: data.pid, //need to get from currentUser
+            username: data.username,
         };
 
         const docRef = await addDoc(collection(db, 'profiles'), add);
