@@ -1,6 +1,39 @@
+import { useState } from 'react';
 import '../../styles/forms.css';
 
+import { profileWrite } from '../../utils/profileWrite';
+import { UserState } from './authUserState';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFloppyDisk } from '@fortawesome/free-solid-svg-icons';
+
+console.log(UserState.user);
+
 const BasicProfileForm = () => {
+    const [ class, setClass ] = useState("");
+    const [ firstname, setFirstName ] = useState("");
+    const [ lastname, setLastName ] = useState("");
+    const [ major, setMajor ] = useState("");
+    const [ username, setUsername ] = useState("");
+    const [ bio, setBio ] = useState("");
+
+    const [ pid, setPID ] = useState("");
+
+    const profileData = {
+        bio: bio,
+        class: class,
+        firstname: firstname,
+        lastname: lastname,
+        major: major,
+        pid: pid, //need to get from currentUser
+        username: username,
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        await profileWrite(profileData);
+    };
+
     return(
         <div className='form__wrapper'>
             <h2>Basic Profile</h2>
@@ -29,6 +62,9 @@ const BasicProfileForm = () => {
                     <textarea id="addBio" type="text" name="bio"></textarea>
                 </div>
                 </div>
+                <button className='icon-button' onSubmit={handleSubmit}>
+                    <FontAwesomeIcon icon={faFloppyDisk} /> Save Profile
+                </button>
             </form>
         </div>
     );

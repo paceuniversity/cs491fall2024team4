@@ -4,8 +4,6 @@ import '../styles/buttons.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons';
 
-import AuthSignOut from '../utils/authSignOut';
-
 function ComingSoon() {
     return(
         <div className='light-theme'>
@@ -16,7 +14,6 @@ function ComingSoon() {
                     <FontAwesomeIcon icon={faArrowLeftLong} />Go Back
                 </button>
             </div>
-            <AuthSignOut />
         </div>
     );
 }

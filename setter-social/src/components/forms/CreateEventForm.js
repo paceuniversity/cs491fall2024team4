@@ -4,7 +4,7 @@ import '../../styles/forms.css';
 
 import { useState } from 'react';
 
-import { eventWrite } from '../../utils/write';
+import { eventWrite } from '../../utils/eventWrite';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';

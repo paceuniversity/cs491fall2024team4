@@ -46,21 +46,23 @@ function App() {
       </ConfigProvider>
       <Routes>
         {/* UNPROTECTED ROUTES */}
-        {/* PROTECTED ROUTES */}
           <Route path="/" element={<Welcome />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path='/login' element={<LogIn />} />
+          <Route path='/signout' element={<AuthSignOut />} />
+        {/* PROTECTED ROUTES - Redirect to Protected Content */}
           <Route path='/signup/newprofile' element={<CreateProfile />} />
           <Route path='/profile/edit' element={<ProfileEdit />} />
           <Route path='/events/newevent' element={<CreateEvent />} />
           <Route path='/profile' element={<ComingSoon />} />
+          <Route path='/events' element={<ExploreEvents />} />
+          <Route path='/eventcreator' element={<EventCreator />} />
+        {/* PROTECTED ROUTES - Redirect to Coming Soon */} 
           <Route path='/chat' element={ auth.currentUser ? (<ComingSoon />) : (<PageNotFound />) } />
           <Route path='/groups' element={<ComingSoon />} />
           <Route path='/feed' element={<ComingSoon />} />
-          <Route path='/events' element={<ExploreEvents />} />
-          <Route path='/eventcreator' element={<EventCreator />} />
-          <Route path='/login' element={<LogIn />} />
-          <Route path='/signout' element={<AuthSignOut />} />
       </Routes>
+      {/* if auth.currentUser && validProfile ? () */}
       <div className='footer__menu-wrapper'>
         <FooterMenu />
       </div>

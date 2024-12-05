@@ -1,17 +1,15 @@
 import { auth } from "../firebase";
 import { signOut } from "firebase/auth";
 
-function AuthSignOut() {
-    const handleSignOut = async () => {
-        try {
+
+async function authSignOut() {
+    try {
         await signOut(auth);
-        } catch (error) {
+        console.log('Signout clicked.');
+    } catch (error) {
         console.log("There was an error logging out: ", error);
-        }  
-    };
-    return (
-        <button onClick={handleSignOut}>Sign Out</button>
-    );
+        alert("Could not sign out.");
+    }  
 }
 
-export default AuthSignOut;
+export default authSignOut;
