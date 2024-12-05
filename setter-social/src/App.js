@@ -1,8 +1,8 @@
 import './App.css';
 import './theme.css';
 
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Route, Routes, Navigate, Outlet} from 'react-router-dom';
 
 import Welcome from './pages/Welcome';
 import Signup from './pages/Signup';
@@ -14,12 +14,27 @@ import ComingSoon from './pages/ComingSoon';
 import FooterMenu from './components/footers/FooterMenu';
 import EventCreator from './pages/EventCreator';
 import ExploreEvents from './pages/ExploreEvents';
+import LogIn from './pages/Login';
+import AuthSignOut from './utils/authSignOut';
 
 import { ConfigProvider } from 'antd';
-import LogIn from './pages/Login';
 
+import { auth } from './firebase';
+import { onAuthStateChanged } from "firebase/auth";
 
 function App() {
+  const [ user, setUser ] = useState(null);
+  console.log("Current User: ", user);
+
+  useEffect(() => {
+      const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+          setUser(currentUser);
+          console.log("Unsubscribe clicked. Current User: ", user);
+      });
+
+      return () => unsubscribe();
+  }, []);
+
   return (
     <>
       <ConfigProvider theme={{
@@ -36,12 +51,13 @@ function App() {
           <Route path='/profile/edit' element={<ProfileEdit />} />
           <Route path='/events/newevent' element={<CreateEvent />} />
           <Route path='/profile' element={<ComingSoon />} />
-          <Route path='/chat' element={<ComingSoon />} />
+          <Route path='/chat' element={ auth.currentUser ? (<ComingSoon />) : (<PageNotFound />) } />
           <Route path='/groups' element={<ComingSoon />} />
           <Route path='/feed' element={<ComingSoon />} />
           <Route path='/events' element={<ExploreEvents />} />
           <Route path='/eventcreator' element={<EventCreator />} />
           <Route path='/login' element={<LogIn />} />
+          <Route path='/signout' element={<AuthSignOut />} />
       </Routes>
       <div className='footer__menu-wrapper'>
         <FooterMenu />
