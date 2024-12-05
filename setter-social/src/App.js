@@ -45,6 +45,8 @@ function App() {
       }}>
       </ConfigProvider>
       <Routes>
+        {/* UNPROTECTED ROUTES */}
+        {/* PROTECTED ROUTES */}
           <Route path="/" element={<Welcome />} />
           <Route path="/signup" element={<Signup />} />
           <Route path='/signup/newprofile' element={<CreateProfile />} />

@@ -35,10 +35,10 @@ function LogIn() {
             <h2>Account Login</h2>
             <div>
                 <form className="form__container-flex form__field-dark" onSubmit={handleSignIn}>
-                    <label htmlFor="userEmail">Email</label>
+                    <label>Email</label>
                     <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
 
-                    <label htmlFor="userPassword">Password</label>
+                    <label>Password</label>
                     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
 
 {/*                     <h3>You will automatically be remembered the next time you visit.</h3> */}
