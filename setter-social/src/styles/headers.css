@@ -1,51 +1,66 @@
-.primary__header {
+.primary__header, .secondary__header {
     align-items: center;
-    border-bottom: 2px dashed var(--royal__blue);
-    color: var(--varsity__navy);
     display: flex;
-    height: 4rem;
+    height: 5rem;
     position: sticky;
     width: 100vw;
 }
 
+.primary__header {
+    border-bottom: 2px dashed var(--royal__blue);
+    color: var(--varsity__navy);
+}
+
+.primary__header button {
+    color: var(--varsity__navy);
+}
+
 .secondary__header {
-    align-items: center;
     border-bottom: 2px dashed var(--sky__blue);
     color: var(--chalk__white);
-    display: flex;
-    height: 4rem;
-    position: sticky;
-    width: 100vw;
+}
+
+.secondary__header button {
+    color: var(--chalk__white);
 }
 
 .primary__header, .secondary__header span {
     align-items: center;
     display: flex;
     justify-items: center;
-    margin: 0 auto;
+    margin: auto;
+    position: static;
 }
 
 .primary__header, .secondary__header h2 {
     text-align: center;
+    margin: 0 auto;
+    padding: 1rem 0;
 }
 
 .primary__header, .secondary__header img {
-    height: 2.5rem;
+    height: 3rem;
+    margin: 0 auto;
     width: auto;
+    padding: 1rem 0;
 }
 
 svg.svg-inline--fa {
     font-size: 2rem;
 }
 
+.icon-left, .icon-right {
+    background: none;
+    border: none;
+    top: 1.5rem;
+    position: absolute;
+    cursor: pointer;
+}
+
 .icon-left {
     left: 2rem;
-    top: 1rem;
-    position: absolute;
 }
 
 .icon-right {
-    right: 2rem;
-    top: 1rem;
-    position: absolute;
+    right: 1rem;
 }
