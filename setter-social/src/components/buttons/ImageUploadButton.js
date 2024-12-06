@@ -1,13 +1,40 @@
-import '../../styles/buttons.css';
+import { useState } from "react";
+import { storage } from '../../firebase';
+import { ref, uploadBytes } from "firebase/storage";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpload } from '@fortawesome/free-solid-svg-icons';
 
-const ImageUploadButton = ({ size = '', buttonType = '' }) => (
-    <button className='icon-button' type={buttonType} style={{ width: size }}>
-        <FontAwesomeIcon icon={faUpload} />
-        Upload an Image
-    </button>
-);
+function ImageUploadButton() {
+    const [ image, setImage ] = useState("");
+
+    const handleImageChange = (e) => {
+        if (e.target.files[0]) {
+            setImage(e.target.files[0]);
+        }
+    };
+
+    const handleUpload = () => {
+        if (image) {
+            const storageRef = ref(storage, `images/${image.name}`);
+            uploadBytes(storageRef, image).then((snapshot) => {
+                console.log("Image Upload successful.");
+            });
+        }
+    };
+    return(
+        <div>
+            <span className="file__upload">
+                <div>Choose File</div>
+                <input className="form__field" type='file' onChange={handleImageChange} />
+            </span>
+            
+            <button className='icon-button' onClick={handleUpload}>
+                <FontAwesomeIcon icon={faUpload} />
+                Upload Image
+            </button>
+        </div>
+    );
+}
 
 export default ImageUploadButton;

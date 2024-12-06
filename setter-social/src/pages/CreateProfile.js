@@ -20,7 +20,7 @@ function CreateProfile() {
             </div>
             <div className='flex-center-col'>
                 <h3 className='text-center'>Next, add a picture so that others can recognize you across the platform...</h3>
-                <ImageUploadButton size='18rem' buttonType='button' />
+                <ImageUploadButton />
             </div>
             <div>
                 <h3 className='text-center'>Ready to explore?</h3>

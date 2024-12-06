@@ -54,6 +54,7 @@ svg.svg-inline--fa {
     border: none;
     top: 1.5rem;
     position: absolute;
+    cursor: pointer;
 }
 
 .icon-left {
