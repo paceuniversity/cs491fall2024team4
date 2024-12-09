@@ -15,6 +15,7 @@ export const eventWrite = async (data) => {
             time: data.time,
             date: data.date,
             description: data.description,
+            userID: data.userID,
         };
 
         const docRef = await addDoc(collection(db, 'events'), add);
