@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import EventForm from '../components/forms/EventForm';
-//import { db } from '../../firebase'; (?)
-//import { collection, addDoc } from 'firebase/firestore'; (?)
+import { eventWrite } from '../utils/eventWrite';
+import { UserState } from '../utils/authUserState';
 
 const EventCreator = () => {
     const [formData, setFormData] = useState({
@@ -13,6 +13,14 @@ const EventCreator = () => {
     });
 
     const [errors, setErrors] = useState({});
+
+    const { user } = UserState();
+
+    useEffect(() => {
+        if (!user) {
+            console.log('User is not logged in!');
+        }
+    }, [user]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -59,17 +67,31 @@ const EventCreator = () => {
 
         setErrors(formErrors);
 
-        if (Object.keys(formErrors).length === 0) {
+        if (Object.keys(formErrors).length === 0 && user) {
             //if no errors
-            console.log('Event Created:', formData)
+            const eventData = {
+                eventName: formData.eventName,
+                eventLocation: formData.eventLocation,
+                eventTime: formData.eventTime,
+                eventDate: formData.eventDate,
+                eventDescription: formData.eventDescription,
+                userID: user.uid,
+            };
 
-            setFormData({
-                eventName: '',
-                eventLocation: '',
-                eventTime: '',
-                eventDate: '',
-                eventDescription: ''
-            });
+            try {
+                await eventWrite(eventData);
+                console.log('Event Created: ', eventData);
+
+                setFormData({
+                    eventName: '',
+                    eventLocation: '',
+                    eventTime: '',
+                    eventDate: '',
+                    eventDescription: ''
+                });
+            } catch (error) {
+                console.error("Error creating event: ", error);
+            }
         }
     };
 

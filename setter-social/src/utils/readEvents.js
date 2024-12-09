@@ -1,20 +1,22 @@
 import '../styles/cards.css';
 
 import { db } from '../firebase';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
 
 import { useEffect, useState } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import EventDeleteButton from '../components/buttons/DeleteEventButton';
 
 console.log("Read script loaded.");
 
 function EventRead() {
-    const [ data, setData ] = useState([]);
+    const [data, setData] = useState([]);
+    const [currentUserID, setCurrentUserID] = useState(null);
 
     useEffect(() => {
-        const fetchData = async ()=> {
+        const fetchData = async () => {
             const querySnapshot = await getDocs(collection(db, 'events'));
             const documents = [];
             querySnapshot.forEach((doc) => {
@@ -23,7 +25,20 @@ function EventRead() {
             setData(documents);
         };
         fetchData();
+
+        setCurrentUserID('currentUserIDFromAuth');
     }, []);
+
+    const deleteEvent = async (eventID) => {
+        try {
+            await deleteDoc(doc(db, 'events', eventID));
+            console.log('Event deleted!');
+            setData((prevData) => prevData.filter((event) => event.id !== eventID));
+        } catch (error) {
+            console.error("Error deleting event: ", error);
+        }
+    };
+
     return (
         <div>
             {data.map((item) => (
@@ -39,6 +54,14 @@ function EventRead() {
                             RSVP
                         </button>
                         <small>people going</small>
+                        <EventDeleteButton
+                            deleteEvent={deleteEvent}
+                            eventID={item.id}
+                            currentUserID={currentUserID}
+                            ownerID={item.userID}
+                            size="auto"
+                            buttonType="button"
+                        />
                     </div>
                 </div>
             ))}
