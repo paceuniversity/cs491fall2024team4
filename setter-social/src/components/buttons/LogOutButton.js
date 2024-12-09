@@ -1,4 +1,4 @@
-import { auth } from "../firebase";
+import { auth } from "../../firebase";
 import { signOut } from "firebase/auth";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,7 +13,7 @@ function LogOutButton() {
         }  
     };
     return (
-        <button onClick={handleSignOut}>
+        <button onClick={handleSignOut} className="icon-button">
             <FontAwesomeIcon icon={faRightFromBracket} />Sign Out
         </button>
     );

@@ -56,11 +56,10 @@ if (redirectToForm) {
                 <h3 className='text-center'>Next, add a picture so that others can recognize you across the platform...</h3>
                 <ImageUploadButton />
             </div>
-            <div>
+{/*             <div>
                 <h3 className='text-center'>Ready to explore?</h3>
                 <p className='text-center'>Save this info and let's go to your feed.</p>
-                <SaveProfileButton size='18rem' />
-            </div>
+            </div> */}
         </div>
     );
 }

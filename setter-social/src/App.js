@@ -12,7 +12,6 @@ import CreateEvent from './pages/CreateEvent';
 import PageNotFound from './pages/404';
 import ComingSoon from './pages/ComingSoon';
 import FooterMenu from './components/footers/FooterMenu';
-import EventCreator from './pages/EventCreator';
 import ExploreEvents from './pages/ExploreEvents';
 import LogIn from './pages/Login';
 import AuthSignOut from './utils/authSignOut';
@@ -21,6 +20,7 @@ import { ConfigProvider } from 'antd';
 
 import { auth } from './firebase';
 import { onAuthStateChanged } from "firebase/auth";
+import LogOutButton from './components/buttons/LogOutButton';
 
 function App() {
   const [ user, setUser ] = useState(null);
@@ -51,21 +51,22 @@ function App() {
           <Route path='/login' element={<LogIn />} />
           <Route path='/signout' element={<AuthSignOut />} />
         {/* PROTECTED ROUTES - Redirect to Protected Content */}
-          <Route path='/signup/newprofile' element={<CreateProfile />} />
-          <Route path='/profile/edit' element={<ProfileEdit />} />
-          <Route path='/events/newevent' element={<CreateEvent />} />
-          <Route path='/profile' element={<ComingSoon />} />
-          <Route path='/events' element={<ExploreEvents />} />
-          <Route path='/eventcreator' element={<EventCreator />} />
+          <Route path='/signup/newprofile' element={ auth.currentUser ? <CreateProfile />  : (<PageNotFound />) } />
+          <Route path='/profile/edit' element={ auth.currentUser ? <ProfileEdit />  : (<PageNotFound />) } />
+          <Route path='/events/newevent' element={ auth.currentUser ? <CreateEvent />  : (<PageNotFound />) } />
+          <Route path='/profile' element={ auth.currentUser ? (<ComingSoon />) : (<PageNotFound />) } />
+          <Route path='/events' element={ auth.currentUser ? <ExploreEvents /> : (<PageNotFound />) } />
         {/* PROTECTED ROUTES - Redirect to Coming Soon */} 
           <Route path='/chat' element={ auth.currentUser ? (<ComingSoon />) : (<PageNotFound />) } />
-          <Route path='/groups' element={<ComingSoon />} />
-          <Route path='/feed' element={<ComingSoon />} />
+          <Route path='/groups' element={ auth.currentUser ? <ComingSoon /> : (<PageNotFound />) } />
+          <Route path='/feed' element={ auth.currentUser ? <ComingSoon /> : (<PageNotFound />) } />
       </Routes>
-      {/* if auth.currentUser && validProfile ? () */}
-      <div className='footer__menu-wrapper'>
-        <FooterMenu />
-      </div>
+      {user && (
+        <div className='footer__menu-wrapper'>
+          <FooterMenu />
+          <LogOutButton />
+        </div>
+      )}
     </>
   );
 }
