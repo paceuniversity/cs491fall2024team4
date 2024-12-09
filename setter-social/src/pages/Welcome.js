@@ -8,8 +8,6 @@ import HeaderLogoDark from '../components/logos/HeaderLogoDark';
 import SignUpButton from '../components/buttons/SignUpButton';
 import LogInButton from '../components/buttons/LogInButton';
 
-import { TestForm } from '../components/forms/dbTestForm';
-
 function Welcome() {
     return(
         <div className='flex-center-col dark-theme'>
@@ -23,11 +21,10 @@ function Welcome() {
                 <Link to="/signup">
                     <SignUpButton size='18rem' />
                 </Link>
-                <Link to=''>
+                <Link to='/login'>
                     <LogInButton  size='18rem' />
                 </Link>
             </div>
-            <TestForm />
         </div>
     );
 }

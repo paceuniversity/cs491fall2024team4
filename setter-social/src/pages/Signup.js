@@ -1,95 +1,72 @@
-import React, { useState } from 'react';
-import '../theme.css';
-import HeaderLogoDark from '../components/logos/HeaderLogoDark';
-import SignUpButton from '../components/buttons/SignUpButton';
-import SignupForm from '../components/forms/SignupForm';
+import { useState } from "react";
+import { Navigate } from "react-router-dom";
+import { auth } from "../firebase";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
-const Signup = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-  });
+import HeaderLogoDark from "../components/logos/HeaderLogoDark";
 
-  const [errors, setErrors] = useState({});
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+function Signup() {
+  const [ email, setEmail ] = useState("");
+  const [ username, setUserName ] = useState("");
+  const [ password, setPassword ] = useState("");
 
-  const validate = () => {
-    const newErrors = {};
+  const [redirectToForm, setRedirectToForm] = useState(false);
 
-    {
-      if (!formData.name) {
-        newErrors.name = "*Name is required!*";
-      }
+  const handleSignUp = async(event) => {
+    event.preventDefault();
+
+    try {
+        await createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
+
+          const user = userCredential.user;
+
+          updateProfile(user, {
+              displayName: username
+          })
+          .then(() => {
+              alert("User profile created!");
+              setRedirectToForm(true);
+          })
+        })
+    } catch(error) {
+        console.log("There was an error at sign up: ", error);
+        alert(error.message);
     }
+};
 
-    {
-      if (!formData.email) {
-        newErrors.email = "*Email is required!*";
-      } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-        newErrors.email = "*Email is invalid*";
-      }
-    }
-
-    {
-      if (!formData.password) {
-        newErrors.password = "*Password is required!*";
-      } else if (formData.password.length < 6) {
-        newErrors.password = "*Password must be at least 6 characters*";
-      }
-    }
-
-    {
-      if (!formData.confirmPassword) {
-        newErrors.confirmPassword = "*Password is required!*";
-      } else if (formData.password !== formData.confirmPassword) {
-        newErrors.password = "*Passwords DO NOT match!*";
-    }
-  }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (validate()) {
-      console.log('User signed up successfully with data:', formData);
-      // Handle signup logic here
-    }
-  };
+if (redirectToForm) {
+    return <Navigate to="/signup/newprofile" replace />;
+}
 
   return (
-    <div className="signup-form flex-center-col dark-theme">
-      <HeaderLogoDark size="10rem" />
+    <div className="form__wrapper dark-theme flex-center-col">
+      <HeaderLogoDark />
+      <h2>Create New Account</h2>
+      <div>
+        <form className="form__container-flex form__field" onSubmit={handleSignUp}>
+{/*           <label>First Name</label>
+          <input type="text" value={firstname} onChange={(e) => setFirstName(e.target.value)}></input>
 
-      <form onSubmit={handleSubmit} className="form__container-grid">
-        <SignupForm
-          formData={formData}
-          handleChange={handleChange}
-          errors={errors}
-        />
+          <label>Last Name</label>
+          <input type="text" value={lastname} onChange={(e) => setLastName(e.target.value)}></input> */}
 
-        <div
-          style={{
-            gridColumn: 'span 3',
-            display: 'flex',
-            alignItems: 'center',
-            marginTop: '3rem',
-          }}
-          className="form__field sign-up-button-container"
-        >
-          <SignUpButton size="90%" buttonType="submit" />
-        </div>
-      </form>
+          <label>Email</label>
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
+
+          <label>Display Name</label>
+          <input type="text" value={username} onChange={(e) => setUserName(e.target.value)}></input>
+
+          <label>Password</label>
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
+
+          <button className="icon-button">
+            <FontAwesomeIcon icon={faUserPlus} /> Create Account
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
