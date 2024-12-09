@@ -18,7 +18,8 @@ function CreateProfile() {
   const [ classyear, setClassYear ] = useState("");
   const [ bio, setBio ] = useState("");
   const [redirectToForm, setRedirectToForm] = useState(false);
-  const handleSignUp = async(event) => {
+  
+  const handleProfileCreate = async(event) => {
     event.preventDefault();
     try {
         await createUserWithEmailAndPassword(auth, firstname, lastname, displayname, major, classyear, bio).then((userCredential) => {

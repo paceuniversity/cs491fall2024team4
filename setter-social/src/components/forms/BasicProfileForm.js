@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../../styles/forms.css';
+import { Navigate } from "react-router-dom";
 
 import { profileWrite } from '../../utils/profileWrite';
 import { UserState } from '../../utils/authUserState';
@@ -17,6 +18,8 @@ const BasicProfileForm = () => {
     const [ username, setUsername ] = useState("");
     const [ bio, setBio ] = useState("");
 
+    const [redirectToForm, setRedirectToForm] = useState(false);
+
     //const [ pid, setPID ] = useState("");
 
     const profileData = {
@@ -32,7 +35,12 @@ const BasicProfileForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         await profileWrite(profileData);
-    };
+        setRedirectToForm(true);
+        };
+
+if (redirectToForm) {
+    return <Navigate to="/events" replace />;
+}
 
     return(
         <div className='form__wrapper'>
