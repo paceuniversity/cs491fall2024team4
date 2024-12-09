@@ -26,7 +26,7 @@ function LogIn() {
     };
 
     if (redirectToFeed) {
-        return <Navigate to="/feed" replace />;
+        return <Navigate to="/events" replace />; // redirect to feed
     }
 
     return(
