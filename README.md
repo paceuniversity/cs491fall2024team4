@@ -2,7 +2,7 @@
 
 ## App name
 
-Setter Social
+SetterSocial
 
 ## Team members
 
@@ -53,24 +53,38 @@ SetterSocial was created by a team of students at Pace University as part of a s
 
 * [Sprint planning](https://docs.google.com/document/d/1Nakzfd2cbA6bgvRFmCHeaqt6PKWTuExPiTgZIEQ3H_I/edit?usp=sharing)
 * [Scrums](https://docs.google.com/document/d/1YGHmBSMdHzgyxpq_6KgC2bextkOvonxT0cQKOWLy0m8/edit?usp=sharing)
-* [Sprint demo video]()
-* [Sprint retrospective]()
+* [Sprint demo video](https://drive.google.com/file/d/1XmI2MatXAUOE_3CRLQZL5KF4n4rC-jFJ/view?usp=share_link)
+* [Sprint retrospective](https://docs.google.com/document/d/1O-EBd31EUowXy9LScEKZS8tMe4iSc_hFdb0TNwu4lXM/edit?usp=share_link)
 
-## Tools & APIs
+## Tools & APIs (alphabetically)
 
+* Adobe Illustrator
+* ant.design
+* Coolors.co
+* Discord
+* Figma
 * Firebase
+  - Authentication
+  - Cloud Firestore
   - Hosting
   - Storage
-  - Cloud Firestore
-  - Authentication
-* ant.design
-* FontAwesome6
-* Discord
+* FontAwesome5
+* GitHub
+  - Code
+  - Issues
+* Google Drive
+  - Docs
+  - Sheets
+  - Slides
+* React
+  - React Router
+  - React.js
+* Visual Studio Code
 
 ## Final delivery
 
-* [Final presentation]()
+* [Final presentation](https://docs.google.com/presentation/d/1yeAtncbklFDDLf0j83WCEwPSYeceOsx_od0k_O6zfHQ/edit?usp=sharing)
 * [Poster]()
-* [Process description]()
+* [Process description](https://docs.google.com/presentation/d/1yeAtncbklFDDLf0j83WCEwPSYeceOsx_od0k_O6zfHQ/edit?usp=sharing)
 
 
