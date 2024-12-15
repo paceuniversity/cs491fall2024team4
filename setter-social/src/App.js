@@ -54,12 +54,12 @@ function App() {
           <Route path='/signup/newprofile' element={ auth.currentUser ? <CreateProfile />  : (<PageNotFound />) } />
           <Route path='/profile/edit' element={ auth.currentUser ? <ProfileEdit />  : (<PageNotFound />) } />
           <Route path='/events/newevent' element={ auth.currentUser ? <CreateEvent />  : (<PageNotFound />) } />
-          <Route path='/profile' element={ auth.currentUser ? (<ComingSoon />) : (<PageNotFound />) } />
           <Route path='/events' element={ auth.currentUser ? <ExploreEvents /> : (<PageNotFound />) } />
         {/* PROTECTED ROUTES - Redirect to Coming Soon */} 
           <Route path='/chat' element={ auth.currentUser ? (<ComingSoon />) : (<PageNotFound />) } />
           <Route path='/groups' element={ auth.currentUser ? <ComingSoon /> : (<PageNotFound />) } />
           <Route path='/feed' element={ auth.currentUser ? <ComingSoon /> : (<PageNotFound />) } />
+          <Route path='/profile' element={ auth.currentUser ? (<ComingSoon />) : (<PageNotFound />) } />
       </Routes>
       {user && (
         <div className='footer__menu-wrapper'>
