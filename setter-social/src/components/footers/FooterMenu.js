@@ -7,7 +7,6 @@ import { faComment, faUsers, faHouse, faCalendar, faUser } from '@fortawesome/fr
 
 import { NavLink } from 'react-router-dom';
 
-
 const FooterMenu = () => {
     return(
         <div className='footer__menu-wrap'>
