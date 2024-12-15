@@ -10,7 +10,7 @@ export default function PageNotFound() {
         <div className='flex-center-justify text-center'>
             <h1>Oh no!</h1>
             <h3>The page you were looking for could not be found.</h3>
-            <Link to='/events'>
+            <Link to='/'>
             <button className='icon-button'>
                 <FontAwesomeIcon icon={faArrowLeftLong} />Go Back
             </button>
