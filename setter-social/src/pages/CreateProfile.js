@@ -9,6 +9,8 @@ import SecondaryHeader from '../components/headers/SecondaryHeader';
 import BasicProfileForm from '../components/forms/BasicProfileForm';
 import SaveProfileButton from '../components/buttons/SaveProfileButton';
 import ImageUploadButton from '../components/buttons/ImageUploadButton';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 function CreateProfile() {
   const [ firstname, setFirstName ] = useState("");
@@ -60,6 +62,10 @@ if (redirectToForm) {
                 <h3 className='text-center'>Ready to explore?</h3>
                 <p className='text-center'>Save this info and let's go to your feed.</p>
             </div> */}
+            <button className='icon-button' onClick={handleProfileCreate}>
+                <FontAwesomeIcon icon={faArrowRight} />
+                Go to App
+            </button>
         </div>
     );
 }
